@@ -1,0 +1,71 @@
+---
+interface Props {
+  sticky?: boolean;
+}
+
+const { sticky = false } = Astro.props;
+
+const navItems = [
+  { name: 'Services', href: '#services' },
+  { name: 'About Us', href: '#about' },
+  { name: 'How It Works', href: '#how-it-works' },
+  { name: 'Contact', href: '#contact' },
+];
+---
+
+<header class:list={[
+  "w-full z-50 bg-backgroundLight py-4 transition-all duration-300",
+  { "fixed top-0 shadow-md": sticky }
+]}>
+  <nav class="container mx-auto px-4 flex items-center justify-between flex-wrap">
+    <a href="/" class="flex items-center text-textPrimary text-2xl font-bold font-['Inter'] tracking-tight">
+      <img src="/logo.svg" alt="Westgate Enterprises, LLC Logo" class="h-8 mr-2" />
+      Westgate Enterprises, LLC
+    </a>
+
+    <div class="block lg:hidden">
+      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-textPrimary border-textPrimary hover:text-accent hover:border-accent">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+
+    <div id="nav-content" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-4 lg:mt-0">
+      <ul class="lg:flex justify-end flex-1 items-center">
+        {navItems.map((item) => (
+          <li>
+            <a href={item.href} class="block lg:inline-block text-textPrimary hover:text-accent font-['Open Sans'] font-medium text-lg py-2 lg:py-0 lg:ml-8 transition-colors duration-200">
+              {item.name}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href="#contact" class="block lg:inline-block bg-accent text-white font-['Open Sans'] font-semibold text-lg py-2 px-6 rounded-md lg:ml-8 mt-4 lg:mt-0 hover:bg-primary transition-colors duration-200 text-center">
+            Request a Free Quote
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navContent = document.getElementById('nav-content');
+
+    if (navToggle && navContent) {
+      navToggle.addEventListener('click', () => {
+        navContent.classList.toggle('hidden');
+      });
+
+      // Close nav when a link is clicked (for mobile)
+      navContent.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (!navContent.classList.contains('lg:block')) { // Only close if it's the mobile menu
+            navContent.classList.add('hidden');
+          }
+        });
+      });
+    }
+  });
+</script>

@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHero from '@/components/PageHero.astro';
+import ContactForm from '@/components/ContactForm.astro';
+
+const seo = {
+  title: "Contact | Westgate Enterprises, LLC",
+  description: "Get in touch with Westgate Enterprises, LLC",
+};
+
+const pageHeroContent = {
+  headline: "Contact Us",
+  subheadline: "We're here to answer your questions and provide expert electrical solutions. Get in touch with Westgate Enterprises, LLC today!",
+};
+---
+
+<Layout title="Contact" seoTitle={seo.title} seoDescription={seo.description}>
+  <main class="bg-backgroundLight min-h-screen">
+    <PageHero headline={pageHeroContent.headline} subheadline={pageHeroContent.subheadline} />
+
+    <section class="py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <h2 class="font-inter text-3xl sm:text-4xl font-bold text-textPrimary text-center mb-8 md:mb-12">
+        Send Us a Message
+      </h2>
+      <ContactForm />
+    </section>
+  </main>
+</Layout>

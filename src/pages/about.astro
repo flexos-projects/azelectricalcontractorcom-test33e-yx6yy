@@ -1,0 +1,157 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Footer from '@/components/Footer.astro';
+
+const content = {
+  "homepage": {
+    "heroHeadline": "Expert Electrical Services in Glendale, AZ: Powering Homes & Businesses with Precision",
+    "heroSubheadline": "From intricate wiring fixes to cutting-edge smart home automation, Westgate Enterprises, LLC delivers unparalleled electrical solutions designed for safety, efficiency, and your complete satisfaction. Experience the difference of local expertise.",
+    "heroCTA": "Request a Free Quote Today",
+    "valueProps": [
+      {
+        "title": "Unrivaled Customer Service",
+        "description": "Our dedication to client satisfaction is second to none. We listen, understand your needs, and ensure every interaction is professional, courteous, and focused on your peace of mind.",
+        "icon": "star"
+      },
+      {
+        "title": "Expert Craftsmanship Guaranteed",
+        "description": "With deep experience and a commitment to quality, we tackle every project, from minor repairs to complex installations, ensuring the job is done right the first time, every time.",
+        "icon": "tools"
+      },
+      {
+        "title": "Transparent & Flexible Solutions",
+        "description": "We provide comprehensive consultations, outlining all your available options. You'll have the clarity to choose the services that perfectly align with your vision and budget.",
+        "icon": "clipboard-list"
+      },
+      {
+        "title": "State-of-the-Art Technology",
+        "description": "Stay ahead with modern electrical solutions, including advanced smart home automation, energy-efficient upgrades, and future-ready installations for your property.",
+        "icon": "lightbulb"
+      }
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Connect & Consult",
+        "description": "Contact us to schedule your comprehensive consultation. We'll discuss your electrical needs, whether it's a repair, upgrade, or new installation, and provide expert insights."
+      },
+      {
+        "step": 2,
+        "title": "Tailored Solutions & Quote",
+        "description": "Based on our discussion, we'll present clear, flexible options and a detailed, no-obligation quote. You choose the scope of work that best suits your requirements and budget."
+      },
+      {
+        "step": 3,
+        "title": "Expert Execution",
+        "description": "Our licensed electricians meticulously execute the approved work, utilizing the highest quality parts and equipment, ensuring safety, efficiency, and adherence to all codes."
+      },
+      {
+        "step": 4,
+        "title": "Guaranteed Satisfaction",
+        "description": "We don't consider the job complete until you are 100% satisfied with our work. Enjoy reliable, long-lasting electrical solutions and complete peace of mind."
+      }
+    ],
+    "benefitsSection": {
+      "headline": "Why Glendale Chooses Westgate Enterprises, LLC for Superior Electrical Work",
+      "benefits": [
+        {
+          "title": "Enhanced Safety for Your Property",
+          "description": "Our certified electricians adhere to the strictest safety standards, ensuring all installations and repairs protect your home or business from electrical hazards.",
+          "image": "https://img1.wsimg.com/isteam/stock/27683/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223"
+        },
+        {
+          "title": "Flexible Services Tailored to You",
+          "description": "From minor fixes to major installations, we offer a comprehensive suite of services designed to meet your specific needs and budget, always with transparent pricing.",
+          "image": "https://img1.wsimg.com/isteam/stock/26849/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223"
+        },
+        {
+          "title": "Customer Satisfaction Guaranteed",
+          "description": "Your peace of mind is our top priority. We stand behind our work with a commitment to excellence and ensure every client is completely satisfied with the results.",
+          "image": "https://img1.wsimg.com/isteam/stock/27677/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223"
+        }
+      ]
+    }
+  }
+};
+
+const aboutContent = {
+  heroHeadline: "About Westgate Enterprises, LLC",
+  heroSubheadline: "Powering Glendale, AZ with Integrity, Expertise, and Unwavering Commitment.",
+  missionHeadline: "Our Mission",
+  missionText: "At Westgate Enterprises, LLC, our mission is to provide Glendale, AZ, and surrounding communities with superior electrical services that prioritize safety, efficiency, and customer satisfaction. We are dedicated to delivering reliable, innovative, and cost-effective solutions for both residential and commercial clients, ensuring every project is completed with the highest standards of quality and professionalism.",
+  valuesHeadline: "Our Core Values",
+  values: [
+    {
+      title: "Integrity",
+      description: "We operate with honesty, transparency, and ethical practices in every interaction, building trust with our clients and within our team."
+    },
+    {
+      title: "Expertise",
+      description: "Our team comprises highly skilled and certified electricians committed to continuous learning and applying the latest industry standards and technologies."
+    },
+    {
+      title: "Customer Focus",
+      description: "We listen attentively to our clients' needs, offer tailored solutions, and strive to exceed expectations with exceptional service and support."
+    },
+    {
+      title: "Safety",
+      description: "The safety of our clients, our team, and their properties is paramount. We adhere to stringent safety protocols and best practices on every job."
+    },
+    {
+      title: "Innovation",
+      description: "We embrace new technologies and methods to provide energy-efficient, smart, and future-ready electrical solutions that benefit our clients."
+    }
+  ]
+};
+---
+
+<Layout title="About" seoTitle="About | Westgate Enterprises, LLC" seoDescription="Learn about Westgate Enterprises, LLC">
+  <main class="flex-grow">
+    <!-- Page Hero Section -->
+    <section class="bg-primary text-secondary py-16 md:py-24 text-center">
+      <div class="container mx-auto px-4">
+        <h1 class="font-headings text-4xl md:text-5xl font-bold mb-4">
+          {aboutContent.heroHeadline}
+        </h1>
+        <p class="font-body text-lg md:text-xl max-w-3xl mx-auto">
+          {aboutContent.heroSubheadline}
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Section: Mission -->
+    <section class="bg-backgroundLight py-16 md:py-20">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="font-headings text-3xl md:text-4xl font-bold text-primary mb-6 text-center">
+          {aboutContent.missionHeadline}
+        </h2>
+        <p class="font-body text-lg text-textPrimary leading-relaxed text-center">
+          {aboutContent.missionText}
+        </p>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="bg-backgroundDark text-secondary py-16 md:py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="font-headings text-3xl md:text-4xl font-bold mb-10 text-center">
+          {aboutContent.valuesHeadline}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {aboutContent.values.map((value) => (
+            <div class="bg-primary p-6">
+              <h3 class="font-headings text-xl md:text-2xl font-semibold mb-3">
+                {value.title}
+              </h3>
+              <p class="font-body text-base text-textMuted">
+                {value.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,157 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ServicesGrid from '@/components/ServicesGrid.astro';
+import PageHero from '@/components/PageHero.astro';
+
+const content = {
+  "homepage": {
+    "heroHeadline": "Expert Electrical Services in Glendale, AZ: Powering Homes & Businesses with Precision",
+    "heroSubheadline": "From intricate wiring fixes to cutting-edge smart home automation, Westgate Enterprises, LLC delivers unparalleled electrical solutions designed for safety, efficiency, and your complete satisfaction. Experience the difference of local expertise.",
+    "heroCTA": "Request a Free Quote Today",
+    "valueProps": [
+      {
+        "title": "Unrivaled Customer Service",
+        "description": "Our dedication to client satisfaction is second to none. We listen, understand your needs, and ensure every interaction is professional, courteous, and focused on your peace of mind.",
+        "icon": "star"
+      },
+      {
+        "title": "Expert Craftsmanship Guaranteed",
+        "description": "With deep experience and a commitment to quality, we tackle every project, from minor repairs to complex installations, ensuring the job is done right the first time, every time.",
+        "icon": "tools"
+      },
+      {
+        "title": "Transparent & Flexible Solutions",
+        "description": "We provide comprehensive consultations, outlining all your available options. You'll have the clarity to choose the services that perfectly align with your vision and budget.",
+        "icon": "clipboard-list"
+      },
+      {
+        "title": "State-of-the-Art Technology",
+        "description": "Stay ahead with modern electrical solutions, including advanced smart home automation, energy-efficient upgrades, and future-ready installations for your property.",
+        "icon": "lightbulb"
+      }
+    ],
+    "howItWorks": [
+      {
+        "step": 1,
+        "title": "Connect & Consult",
+        "description": "Contact us to schedule your comprehensive consultation. We'll discuss your electrical needs, whether it's a repair, upgrade, or new installation, and provide expert insights."
+      },
+      {
+        "step": 2,
+        "title": "Tailored Solutions & Quote",
+        "description": "Based on our discussion, we'll present clear, flexible options and a detailed, no-obligation quote. You choose the scope of work that best suits your requirements and budget."
+      },
+      {
+        "step": 3,
+        "title": "Expert Execution",
+        "description": "Our licensed electricians meticulously execute the approved work, utilizing the highest quality parts and equipment, ensuring safety, efficiency, and adherence to all codes."
+      },
+      {
+        "step": 4,
+        "title": "Guaranteed Satisfaction",
+        "description": "We don't consider the job complete until you are 100% satisfied with our work. Enjoy reliable, long-lasting electrical solutions and complete peace of mind."
+      }
+    ],
+    "benefitsSection": {
+      "headline": "Why Glendale Chooses Westgate Enterprises, LLC for Superior Electrical Work",
+      "benefits": [
+        {
+          "title": "Enhanced Safety for Your Property",
+          "description": "Our meticulous approach to every electrical task ensures that your home or business is not only powered efficiently but also operates with the highest safety standards, protecting your loved ones and assets.",
+          "icon": "shield-check"
+        },
+        {
+          "title": "Energy Efficiency & Cost Savings",
+          "description": "Upgrade to modern, energy-efficient electrical systems and lighting solutions that reduce your utility bills and minimize your environmental footprint, all while improving performance.",
+          "icon": "bolt"
+        },
+        {
+          "title": "Increased Property Value",
+          "description": "Professional electrical upgrades and installations enhance the functionality, appeal, and market value of your property, making it a wise investment for the future.",
+          "icon": "chart-line"
+        },
+        {
+          "title": "Reliable & Uninterrupted Power",
+          "description": "Experience consistent, dependable power with our expert installations and maintenance. Say goodbye to frequent outages and electrical issues that disrupt your daily life or business operations.",
+          "icon": "power-plug"
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "name": "Sarah J.",
+        "location": "Glendale, AZ",
+        "quote": "Westgate Enterprises, LLC installed new lighting in my kitchen, and I couldn't be happier! Professional, clean, and the results are stunning. Highly recommend their services!",
+        "rating": 5
+      },
+      {
+        "name": "Mark T.",
+        "location": "Peoria, AZ",
+        "quote": "Had an emergency electrical repair, and Westgate Enterprises, LLC was incredibly responsive and efficient. They fixed the issue quickly and explained everything clearly. Fantastic service!",
+        "rating": 5
+      },
+      {
+        "name": "Emily R.",
+        "location": "Phoenix, AZ",
+        "quote": "Their team upgraded our entire electrical panel. The process was smooth, and the electricians were knowledgeable and courteous. A truly professional experience from start to finish.",
+        "rating": 4
+      }
+    ],
+    "services": [
+      {
+        "title": "Residential Electrical Services",
+        "description": "Comprehensive electrical solutions for homes, including wiring, panel upgrades, lighting installation, and smart home integration.",
+        "image": "https://img1.wsimg.com/isteam/stock/27683/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223",
+        "alt": "Stock image illustrating 'Reliable Electricians' section, showing a person working on electrical wiring."
+      },
+      {
+        "title": "Commercial Electrical Services",
+        "description": "Expert electrical installations, maintenance, and repairs for businesses, ensuring safety and operational efficiency.",
+        "image": "https://img1.wsimg.com/isteam/stock/26849/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223",
+        "alt": "Stock image illustrating 'Flexible Services' section, showing a person reviewing plans or blueprints."
+      },
+      {
+        "title": "Electrical Panel Upgrades",
+        "description": "Modernize your electrical system with safe and efficient panel upgrades to meet current demands and future needs.",
+        "image": "https://img1.wsimg.com/isteam/stock/27677/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223",
+        "alt": "Stock image illustrating 'Customer Satisfaction Guaranteed' section, showing a handshake."
+      },
+      {
+        "title": "Lighting Installation & Repair",
+        "description": "From ambient to task lighting, we design and install interior and exterior lighting solutions, including LED conversions.",
+        "image": "https://img1.wsimg.com/isteam/stock/27683/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223",
+        "alt": "Stock image illustrating 'Reliable Electricians' section, showing a person working on electrical wiring."
+      },
+      {
+        "title": "Smart Home Automation",
+        "description": "Integrate smart technology into your home for enhanced convenience, security, and energy management.",
+        "image": "https://img1.wsimg.com/isteam/stock/26849/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223",
+        "alt": "Stock image illustrating 'Flexible Services' section, showing a person reviewing plans or blueprints."
+      },
+      {
+        "title": "Safety Inspections & Code Compliance",
+        "description": "Thorough electrical inspections and upgrades to ensure your property meets all local and national electrical codes.",
+        "image": "https://img1.wsimg.com/isteam/stock/27677/:/rs=w:223,h:223,cg:true,m/cr=w:223,h:223",
+        "alt": "Stock image illustrating 'Customer Satisfaction Guaranteed' section, showing a handshake."
+      }
+    ]
+  }
+};
+---
+
+<Layout
+  title="Services"
+  seoTitle="Services | Westgate Enterprises, LLC"
+  seoDescription="Professional services from Westgate Enterprises, LLC"
+>
+  <PageHero
+    headline="Our Professional Services"
+    subheadline="At Westgate Enterprises, LLC, we offer a comprehensive range of electrical services designed to meet the diverse needs of homes and businesses across Glendale, AZ, and surrounding areas. Explore our expertise."
+    ctaText="Request a Free Quote Today"
+    ctaLink="/contact"
+  />
+
+  <main class="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+    <ServicesGrid services={content.homepage.services} />
+  </main>
+</Layout>
